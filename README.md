@@ -31,6 +31,7 @@ project-root/
 - Docker Compose
 - Node.js (for local development)
 - Python 3.x (for local development)
+- Docker Hub account (for image uploads)
 
 ## 🛠 Setup Instructions
 
@@ -52,7 +53,23 @@ The application will be available at:
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend: [http://localhost:5000](http://localhost:5000)
 
-### 3. Local Development Setup (Optional)
+### 3. Push Images to Docker Hub
+
+```bash
+# Tag the images
+docker tag docker-form-app-frontend pushpendumukherjee/frontend
+docker tag docker-form-app-backend pushpendumukherjee/backend
+
+# Push to Docker Hub
+docker push pushpendumukherjee/frontend
+docker push pushpendumukherjee/backend
+```
+
+Docker Hub Images:
+- Frontend: [pushpendumukherjee/frontend](https://hub.docker.com/r/pushpendumukherjee/frontend)
+- Backend: [pushpendumukherjee/backend](https://hub.docker.com/r/pushpendumukherjee/backend)
+
+### 4. Local Development Setup (Optional)
 
 #### Frontend Setup
 ```bash
